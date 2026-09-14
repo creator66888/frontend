@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+*.log.err
+npm-debug.log*
+
+# Build output
+out/
+dist/
+build/
+
+# TypeScript / cache
+*.tsbuildinfo
+.next/
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local database files
+data/*.db
+data/*.sqlite
