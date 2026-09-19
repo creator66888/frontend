@@ -93,7 +93,7 @@
           email: document.getElementById('email').value.trim(),
         };
 
-        fetch('/api/appointments', {
+        fetch('https://backend-2103.vercel.app', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
