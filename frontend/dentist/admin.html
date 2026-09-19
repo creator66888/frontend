@@ -154,7 +154,7 @@
       }
 
       function updateStatus(id, status) {
-        fetch('https://backend-2103.vercel.app' + id, {
+        fetch('https://backend-2103.vercel/api/appointments' + id, {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ status: status }),
