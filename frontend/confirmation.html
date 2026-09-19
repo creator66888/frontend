@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking Received - XYZ Dental Clinic</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-icon"><img src="logo.png" alt="Logo" class="logo-img" /></span>
+        <span>XYZ Dental <small>Clinic</small></span>
+      </a>
+      <a href="index.html#booking" class="btn btn-primary btn-nav">Book Another</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section-alt">
+      <div class="container">
+        <div class="confirmation-card">
+          <div class="confirmation-check">&#10003;</div>
+          <h2>Thank You, <span id="confName"></span>!</h2>
+          <p class="confirmation-sub">
+            Your booking request has been received. Contact us on WhatsApp (or call) and we will
+            confirm your appointment right away.
+          </p>
+          <div class="token-box" id="tokenBox" hidden>
+            <p class="token-label">Your Token</p>
+            <p class="token-value" id="tokenValue"></p>
+          </div>
+
+          <div class="whatsapp-box">
+            <span class="whatsapp-icon">&#128172;</span>
+            <p class="whatsapp-label">Book via WhatsApp</p>
+            <a class="whatsapp-number" id="whatsappNumber" href="#" target="_blank" rel="noopener">Loading...</a>
+            <a class="btn btn-primary btn-block" href="index.html#booking">Book Now</a>
+          </div>
+
+          <p class="form-note">Prefer to call? <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 XYZ Dental Clinic. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+      var WHATSAPP_NUMBER = '15551234567';
+      var WHATSAPP_DISPLAY = '+1 (555) 123-4567';
+      var params = new URLSearchParams(window.location.search);
+      var name = params.get('name') || '';
+      var token = params.get('token') || '';
+
+      var nameEl = document.getElementById('confName');
+      if (nameEl) nameEl.textContent = name;
+
+      var tokenBox = document.getElementById('tokenBox');
+      var tokenValue = document.getElementById('tokenValue');
+      if (token && tokenBox && tokenValue) {
+        tokenValue.textContent = token;
+        tokenBox.hidden = false;
+      }
+
+      var numberEl = document.getElementById('whatsappNumber');
+      if (numberEl) {
+        numberEl.textContent = WHATSAPP_DISPLAY;
+        numberEl.href = 'https://wa.me/' + WHATSAPP_NUMBER;
+      }
+    })();
+  </script>
+</body>
+</html>
