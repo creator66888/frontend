@@ -1,0 +1,12 @@
+{
+  "name": "bright-smile-dental",
+  "version": "1.0.0",
+  "description": "Dentist clinic website with appointment booking and token system",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "pg": "^8.11.3"
+  }
+}
