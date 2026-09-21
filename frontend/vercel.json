@@ -1,6 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/secret-admin-page-xyz", "destination": "/index.html" },
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
-}
