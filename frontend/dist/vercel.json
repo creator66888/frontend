@@ -1,0 +1,10 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://backend-woad-kappa-55.vercel.app/api/$1"
+    },
+    { "source": "/secret-admin-page-xyz", "destination": "/index.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
